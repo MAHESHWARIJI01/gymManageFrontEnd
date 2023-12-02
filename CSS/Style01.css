@@ -1,0 +1,166 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    /* text-transform: capitalize;
+    -webkit-transition: all .2s linear; */
+    /* transition: all .2s linear; */
+  }
+  .loginContainer{
+    position: absolute;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .loginContainer .wrapper{
+    /* position: relative; */
+    overflow:hidden;
+    width: 60%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+}
+
+.slides-container{
+    
+    height: 100vh;
+    position: relative;
+}
+
+.slide-image{
+    height:100%;
+    width: 100%;
+    position:absolute;
+    object-fit:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    display: none;
+    animation:slide 3s ease;
+    opacity: 0.3;
+    
+}
+@keyframes slide{
+    0%{
+        transform: scale(1.1);
+    }
+    /* 10%{
+        transform: scale(1.1);
+    } */
+
+    100%{
+        transform: scale(1);
+    }
+}
+.slide-image.activeImg{
+    display: flex;
+}
+.slide-image img{
+    
+    height:100%;
+    width:100%;
+    /* object-fit: cover; */
+}
+
+
+.loginContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 40%;
+    /* border: 1px solid red; */
+    padding-top: 12rem;
+    background-color: #000000;
+    border: none;
+    
+}
+.loginContent::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 975px;
+    width: 80px;
+    height: 100%;
+    z-index: 1;
+    /* background: linear-gradient(to right, #0a0909,transparent); */
+    box-shadow: -70px 18px 30px #000000;
+}
+
+.loginContent .welcome h1{
+     font-size: 3rem;
+     font-weight: 600;
+     color: red;
+     margin-bottom: 0.3rem;
+}
+.loginContent .welcome h1 span{
+    color: white;
+}
+.loginContent .welcome p{
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 8rem;
+}
+.loginContent form{
+    width: 53%;
+    /* border: 1px red solid; */
+    padding: 10px 5px;
+}
+.loginContent form .formContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginContent form .formContent label{
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+.loginContent form .formContent input{
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    padding: 7px 9px;
+    border-radius: 0.3rem;
+}
+.loginContent form .login-btn {
+    margin-bottom: 0.8rem;
+    background-color:red;
+    color:white;
+    padding: 0.7rem 1.4rem;
+    clip-path: polygon(100% 0, 100% 71%, 90% 100%, 0 100%, 0 0);
+    border-radius:0.2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px -8px red;
+}
+.loginContent form .login-btn a{
+    color: white;
+    
+
+}
+.loginContent form .login-btn:hover{
+    transform: scale(1.01);
+    box-shadow: 0 8px 25px -8px red;
+}
+.loginContent form .sign-in{
+    width: 53%;
+    margin: auto;
+    text-align: center;
+}
+.loginContent form .sign-in a{
+    color: red;
+
+}
+
+
